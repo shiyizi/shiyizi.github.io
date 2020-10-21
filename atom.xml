@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>记录编程点滴</title>
+  
+  
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2020-10-21T07:37:50.703Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>十一子的个人网站</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>搭建个人博客</title>
+    <link href="http://example.com/2020/10/21/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://example.com/2020/10/21/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</id>
+    <published>2020-10-21T05:23:04.000Z</published>
+    <updated>2020-10-21T07:37:50.703Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="一、博客组成"><a href="#一、博客组成" class="headerlink" title="一、博客组成"></a>一、博客组成</h2><p>博客包括三部分：框架+主题+域名。</p><h3 id="1、框架"><a href="#1、框架" class="headerlink" title="1、框架"></a>1、框架</h3><p>博客框架指的是<br>包括静态框架和动态框架。<br>主流的静态框架有：<br>hexo（参见<a href="https://hexo.io/zh-cn/docs/">hexo中文文档</a>）；</p><h3 id="2、主题"><a href="#2、主题" class="headerlink" title="2、主题"></a>2、主题</h3><p>不同框架下会有不同主题可选。主题不互通。<br>作为主流静态框架，hexo上有多种主题可供选择，如yilia、Sakura等。</p><h3 id="3、域名"><a href="#3、域名" class="headerlink" title="3、域名"></a>3、域名</h3><p>既然要做一个博客网站，域名是必不可少的。如果你不想掏钱买，还可以通过Github、Gitee等代码托管平台，让它为你分配一个免费的域名。当然前提是你已经在某托管平台上注册过。</p><h2 id="二、框架使用"><a href="#二、框架使用" class="headerlink" title="二、框架使用"></a>二、框架使用</h2><p>以hexo静态框架为例。<br>已经有许多优秀的博主整理过非常详尽的步骤了，比如<a href="https://www.jianshu.com/p/6dfc7cfdc7e0">【Hexo搭建独立博客全纪录】（三）使用Hexo搭建博客</a>、<a href="https://www.jianshu.com/p/b5d7dcc83728">『Hexo』使用Hexo搭建GitHub博客</a>等等。<br>我这里整理一下我踩过的坑。</p><h2 id="三、主题选取"><a href="#三、主题选取" class="headerlink" title="三、主题选取"></a>三、主题选取</h2><p>选好了框架，一般框架下也会为你提供一个简单的主题。比如hexo中的<code>landscape</code>文件就是hexo自带的一个主题。<br>主题安装有两种方式：<br>1.在Bash上输入命令。<br>2.在Github上搜索主题发布者，下载Zip文件。</p><h2 id="四、域名创建和绑定"><a href="#四、域名创建和绑定" class="headerlink" title="四、域名创建和绑定"></a>四、域名创建和绑定</h2><p>如果你不在乎博客的域名是什么形式的，只是小打小闹想做一个个人网站，我个人推荐使用托管平台来创建域名。它唯一且最大的优点是：免费！<br>以Github为例。</p><h2 id="五、其它有趣的功能"><a href="#五、其它有趣的功能" class="headerlink" title="五、其它有趣的功能"></a>五、其它有趣的功能</h2><h3 id="1、站内搜索"><a href="#1、站内搜索" class="headerlink" title="1、站内搜索"></a>1、站内搜索</h3><pre class=" language-yml"><code class="language-yml">1+1=2</code></pre><h3 id="2、多级导航菜单"><a href="#2、多级导航菜单" class="headerlink" title="2、多级导航菜单"></a>2、多级导航菜单</h3><pre class=" language-yml"><code class="language-yml"># Sitetitle: 你的站点名subtitle:description: 站点简介keywords:author: 作者名language: zh-cntimezone:</code></pre><h3 id="3、音乐播放器"><a href="#3、音乐播放器" class="headerlink" title="3、音乐播放器"></a>3、音乐播放器</h3><h3 id="4、评论"><a href="#4、评论" class="headerlink" title="4、评论"></a>4、评论</h3><h3 id="5、代码块高亮"><a href="#5、代码块高亮" class="headerlink" title="5、代码块高亮"></a>5、代码块高亮</h3><p>参见<a href="https://blog.csdn.net/weixin_45631738/article/details/104771095">hexo+sakura主题美化合集</a><br>1.首先我们需要安装代码块高亮的插件，通过下面命令安装</p><pre class=" language-Bash"><code class="language-Bash">npm i -S hexo-prism-plugin</code></pre><p>2.我们需要修改博客的配置文件<code>_config.yml</code>, 关闭自带的高亮<br>在配置文件中找看有没有highlight，有的话用下面代码将其替换，没有的话自行添加，可以添加在代码的最末尾处</p><pre class=" language-yml"><code class="language-yml">highlight:  enable: falseprism_plugin:  mode: 'preprocess'      theme: 'default'  line_number: false    # default false  custom_css: 'path/to/your/custom.css'     # optional</code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot; cla</summary>
+      
+    
+    
+    
+    <category term="技术" scheme="http://example.com/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="-使用教程" scheme="http://example.com/tags/%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>电脑使用快捷键</title>
+    <link href="http://example.com/2020/10/20/%E7%94%B5%E8%84%91%E4%BD%BF%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
+    <id>http://example.com/2020/10/20/%E7%94%B5%E8%84%91%E4%BD%BF%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</id>
+    <published>2020-10-20T06:40:43.000Z</published>
+    <updated>2020-10-21T07:34:27.744Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>学会一般常用的电脑快捷键能有效提升电脑的使用速度。下面，我从自身经验来介绍一些常用的快捷键，供大家参考食用。</p><h2 id="防偷窥隐私类"><a href="#防偷窥隐私类" class="headerlink" title="防偷窥隐私类"></a>防偷窥隐私类</h2><pre><code>Win+D：所有窗口最小化/恢复原来打开窗口；Win+M：所有窗口最小化；</code></pre><p>这两个是防偷窥的初级形式，优点是简单快捷，不易被发现；<br>缺点是只要看一眼任务栏，你打开过哪些软件一目了然。</p><a id="more"></a><pre><code>Ctrl+Win+D：创建新桌面窗口；Ctrl+Win+→/←：桌面多窗口切换；Win+Tab：查看共创建了多少个桌面多窗口；</code></pre><p>这三个是防偷窥的高级模式，首先用第一个创建好一个新的桌面窗口（如下图）<br><img src="/1.jpg"><br>之后再用第二个就可以啦！<br>优点：对于boss来突击检查等情况，可以突然转换桌面形态且在任务栏不留痕迹，不要太爽。</p><p>Alt+Tab：窗口切换；<br>Ctrl+Tab：浏览器中切换当前页面；<br>Shift+小写英文字母：大写英文字母；<br>Ctrl+S：保存；<br>Ctrl+Shift+X（Ctrl+Alt+A）：QQ浏览器截屏；<br>Backspace：删除光标左侧一位；<br>Delete：删除光标右侧一位；<br>Shift+Win+S：Win10截屏；<br>Win+V：云剪切板；<br>Win+R：运行；<br>Ctrl+W：（QQ浏览器、WPS）删除当前页面；<br>Ctrl+T：QQ浏览器新增空白页面；<br>Alt+F4：关闭当前程序；<br>Win+Pause Break:查看计算机系统等信息；<br>Ctrl+L:全选地址栏（浏览器、我的电脑通用）；<br>Ctrl+R（F5）：刷新页面；</p><p>Win+数字：打开任务栏第X个应用；<br>Ctrl+数字：显示QQ浏览器中第X个网页页面；<br>Alt+Win+D：打开日历；</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;学会一般常用的电脑快捷键能有效提升电脑的使用速度。下面，我从自身经验来介绍一些常用的快捷键，供大家参考食用。&lt;/p&gt;
+&lt;h2 id=&quot;防偷窥隐私类&quot;&gt;&lt;a href=&quot;#防偷窥隐私类&quot; class=&quot;headerlink&quot; title=&quot;防偷窥隐私类&quot;&gt;&lt;/a&gt;防偷窥隐私类&lt;/h2&gt;&lt;pre&gt;&lt;code&gt;Win+D：所有窗口最小化/恢复原来打开窗口；
+Win+M：所有窗口最小化；&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这两个是防偷窥的初级形式，优点是简单快捷，不易被发现；&lt;br&gt;缺点是只要看一眼任务栏，你打开过哪些软件一目了然。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="生活" scheme="http://example.com/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+    <category term="便捷工具" scheme="http://example.com/tags/%E4%BE%BF%E6%8D%B7%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>my-first-blog</title>
+    <link href="http://example.com/2020/10/19/my-first-blog/"/>
+    <id>http://example.com/2020/10/19/my-first-blog/</id>
+    <published>2020-10-19T04:56:09.000Z</published>
+    <updated>2020-10-19T04:58:29.672Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>使用github pages服务搭建博客的好处有：</p><ol><li>全是静态文件，访问速度快；</li><li>免费方便，不用花一分钱就可以搭建一个自由的个人博客，不需要服务器不需要后台；</li><li>可以随意绑定自己的域名，不仔细看的话根本看不出来你的网站是基于github的；</li></ol><a id="more"></a><ol start="4"><li>数据绝对安全，基于github的版本管理，想恢复到哪个历史版本都行；</li><li>博客内容可以轻松打包、转移、发布到其它平台；</li><li>等等；</li></ol>]]></content>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;使用github pages服务搭建博客的好处有：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;全是静态文件，访问速度快；&lt;/li&gt;
+&lt;li&gt;免费方便，不用花一分钱就可以搭建一个自由的个人博客，不需要服务器不需要后台；&lt;/li&gt;
+&lt;li&gt;可以随意绑定自己的域名，不仔细看的话根本看不出来你的网站是基于github的；&lt;/li&gt;
+&lt;/ol&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://example.com/2020/09/12/hello-world/"/>
+    <id>http://example.com/2020/09/12/hello-world/</id>
+    <published>2020-09-12T04:11:10.101Z</published>
+    <updated>2020-10-19T10:11:37.672Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><a id="more"></a><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate</code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;pre&gt;&lt;code class=&quot;bash&quot;&gt;$ hexo new &amp;quot;My New Post&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/writing.html&quot;&gt;Writing&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+</feed>

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">记录编程点滴</title>
+  <title itemprop="name">搭建个人博客 | 记录编程点滴</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -395,236 +395,131 @@
   </div>
 </header>
 
-      <div class="blank" style="padding-top: 0px;"></div>
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
 <div id="content" class="site-content">
-  
-  <div class="notice" style="margin-top:60px">
-    <i class="iconfont icon-notification">
-    </i>
-    <div class="notice-content">hexo-Sakura主题已经开源，目前正在开发中...</div>
-  </div>
-  
-  <div class="top-feature-row">
-  <h1 class="fes-title" style="font-family: 'Ubuntu', sans-serif;">
-  <i class="fa fa-anchor" aria-hidden="true">
-  </i>
-  START:DASH!!</h1>
-  
-  <div class="top-feature-v2">
-    <div class="the-feature square from_left_and_right">
-      <a href="/theme-sakura/" target="_blank">
-        <div class="img">
-          <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/startdash/sakura.md.png">
-        </div>
-        <div class="info">
-          <h3>Sakura</h3>
-          <p>本站 hexo 主题</p>
-        </div>
-      </a>
-    </div>
-  </div>
-  
-  <div class="top-feature-v2">
-    <div class="the-feature square from_left_and_right">
-      <a href="http://space.bilibili.com/271849279" target="_blank">
-        <div class="img">
-          <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/startdash/bilibili.jpg">
-        </div>
-        <div class="info">
-          <h3>Bilibili</h3>
-          <p>博主的b站视频</p>
-        </div>
-      </a>
-    </div>
-  </div>
-  
-  <div class="top-feature-v2">
-    <div class="the-feature square from_left_and_right">
-      <a href="/" target="_blank">
-        <div class="img">
-          <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/startdash/wangshiwu.jpg">
-        </div>
-        <div class="info">
-          <h3>hojun的万事屋</h3>
-          <p>技术服务</p>
-        </div>
-      </a>
-    </div>
-  </div>
-  
-</div>
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
-      <h1 class="main-title" style="font-family: 'Ubuntu', sans-serif;">
-      <i class="fa fa-envira" aria-hidden="true"></i>
-      Discovery</h1>
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+          <header class="entry-header">
+            <h1 class="entry-title">搭建个人博客</h1>
+            <p class="entry-census">&nbsp;·&nbsp;2020-10-21&nbsp;·&nbsp;<span id="busuanzi_value_page_pv"></span>次阅读</p></p>
+
+            <hr>
+          </header>
+        
+        <div class="entry-content">
+          <h2 id="一、博客组成"><a href="#一、博客组成" class="headerlink" title="一、博客组成"></a>一、博客组成</h2><p>博客包括三部分：框架+主题+域名。</p>
+<h3 id="1、框架"><a href="#1、框架" class="headerlink" title="1、框架"></a>1、框架</h3><p>博客框架指的是<br>包括静态框架和动态框架。<br>主流的静态框架有：<br>hexo（参见<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">hexo中文文档</a>）；</p>
+<h3 id="2、主题"><a href="#2、主题" class="headerlink" title="2、主题"></a>2、主题</h3><p>不同框架下会有不同主题可选。主题不互通。<br>作为主流静态框架，hexo上有多种主题可供选择，如yilia、Sakura等。</p>
+<h3 id="3、域名"><a href="#3、域名" class="headerlink" title="3、域名"></a>3、域名</h3><p>既然要做一个博客网站，域名是必不可少的。如果你不想掏钱买，还可以通过Github、Gitee等代码托管平台，让它为你分配一个免费的域名。当然前提是你已经在某托管平台上注册过。</p>
+<h2 id="二、框架使用"><a href="#二、框架使用" class="headerlink" title="二、框架使用"></a>二、框架使用</h2><p>以hexo静态框架为例。<br>已经有许多优秀的博主整理过非常详尽的步骤了，比如<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/6dfc7cfdc7e0">【Hexo搭建独立博客全纪录】（三）使用Hexo搭建博客</a>、<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/b5d7dcc83728">『Hexo』使用Hexo搭建GitHub博客</a>等等。<br>我这里整理一下我踩过的坑。</p>
+<h2 id="三、主题选取"><a href="#三、主题选取" class="headerlink" title="三、主题选取"></a>三、主题选取</h2><p>选好了框架，一般框架下也会为你提供一个简单的主题。比如hexo中的<code>landscape</code>文件就是hexo自带的一个主题。<br>主题安装有两种方式：<br>1.在Bash上输入命令。<br>2.在Github上搜索主题发布者，下载Zip文件。</p>
+<h2 id="四、域名创建和绑定"><a href="#四、域名创建和绑定" class="headerlink" title="四、域名创建和绑定"></a>四、域名创建和绑定</h2><p>如果你不在乎博客的域名是什么形式的，只是小打小闹想做一个个人网站，我个人推荐使用托管平台来创建域名。它唯一且最大的优点是：免费！<br>以Github为例。</p>
+<h2 id="五、其它有趣的功能"><a href="#五、其它有趣的功能" class="headerlink" title="五、其它有趣的功能"></a>五、其它有趣的功能</h2><h3 id="1、站内搜索"><a href="#1、站内搜索" class="headerlink" title="1、站内搜索"></a>1、站内搜索</h3><pre class=" language-yml"><code class="language-yml">1+1=2</code></pre>
+<h3 id="2、多级导航菜单"><a href="#2、多级导航菜单" class="headerlink" title="2、多级导航菜单"></a>2、多级导航菜单</h3><pre class=" language-yml"><code class="language-yml"># Site
+title: 你的站点名
+subtitle:
+description: 站点简介
+keywords:
+author: 作者名
+language: zh-cn
+timezone:</code></pre>
+<h3 id="3、音乐播放器"><a href="#3、音乐播放器" class="headerlink" title="3、音乐播放器"></a>3、音乐播放器</h3><h3 id="4、评论"><a href="#4、评论" class="headerlink" title="4、评论"></a>4、评论</h3><h3 id="5、代码块高亮"><a href="#5、代码块高亮" class="headerlink" title="5、代码块高亮"></a>5、代码块高亮</h3><p>参见<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45631738/article/details/104771095">hexo+sakura主题美化合集</a><br>1.首先我们需要安装代码块高亮的插件，通过下面命令安装</p>
+<pre class=" language-Bash"><code class="language-Bash">npm i -S hexo-prism-plugin</code></pre>
+<p>2.我们需要修改博客的配置文件<code>_config.yml</code>, 关闭自带的高亮<br>在配置文件中找看有没有highlight，有的话用下面代码将其替换，没有的话自行添加，可以添加在代码的最末尾处</p>
+<pre class=" language-yml"><code class="language-yml">highlight:
+  enable: false
+prism_plugin:
+  mode: 'preprocess'    
+  theme: 'default'
+  line_number: false    # default false
+  custom_css: 'path/to/your/custom.css'     # optional</code></pre>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/AliPayQR.jpg"></li>
+                <li class="wechat-code"><img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/custom/donate/WeChanQR.jpg"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+        
+          
+            <div class="post-nepre full next">
+          
+            <a href="/2020/10/20/%E7%94%B5%E8%84%91%E4%BD%BF%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                电脑使用快捷键</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
       
-  <!-- 首页默认取最最新文章集 -->
-  
-    
-<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz",
+        appKey: "mgOpfzbkHYqU92CV4IDlAUHQ",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
 
-  <div class="post-thumb">
-    <a href="/2020/10/21/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/image-404.png">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2020-10-21 13:10</div>
-      <a href="/2020/10/21/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="post-title">
-        <h3>搭建个人博客</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">-使用教程<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/%E6%8A%80%E6%9C%AF/">技术</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p></p>
-        <div class="post-bottom">
-          <a href="/2020/10/21/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+          <a href="" class="profile gravatar"><img src="" itemprop="image" alt="" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="" itemprop="url" rel="author"></a>
+            </h3>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2020/10/20/%E7%94%B5%E8%84%91%E4%BD%BF%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/image-404.png">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2020-10-20 14:10</div>
-      <a href="/2020/10/20/%E7%94%B5%E8%84%91%E4%BD%BF%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/" class="post-title">
-        <h3>电脑使用快捷键</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/%E4%BE%BF%E6%8D%B7%E5%B7%A5%E5%85%B7/">便捷工具<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/%E7%94%9F%E6%B4%BB/">生活</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p></p>
-        <div class="post-bottom">
-          <a href="/2020/10/20/%E7%94%B5%E8%84%91%E4%BD%BF%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2020/10/19/my-first-blog/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/image-404.png">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2020-10-19 12:10</div>
-      <a href="/2020/10/19/my-first-blog/" class="post-title">
-        <h3>my-first-blog</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p></p>
-        <div class="post-bottom">
-          <a href="/2020/10/19/my-first-blog/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb" itemscope="" itemtype="https://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/2020/09/12/hello-world/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/image-404.png">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2020-9-12 12:09</div>
-      <a href="/2020/09/12/hello-world/" class="post-title">
-        <h3>Hello World</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p></p>
-        <div class="post-bottom">
-          <a href="/2020/09/12/hello-world/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-
-
-    </main>
-      <!-- 首页默认取最最新文章集 -->
-    <!--  -->
-  </div>
-  
+        <hr>
+        <p><i class="iconfont icon-write"></i></p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
 </div>
+
+
 
     </div>    
     <div class="ins-search">
