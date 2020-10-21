@@ -419,27 +419,59 @@
 <h3 id="2、主题"><a href="#2、主题" class="headerlink" title="2、主题"></a>2、主题</h3><p>不同框架下会有不同主题可选。主题不互通。<br>作为主流静态框架，hexo上有多种主题可供选择，如yilia、Sakura等。</p>
 <h3 id="3、域名"><a href="#3、域名" class="headerlink" title="3、域名"></a>3、域名</h3><p>既然要做一个博客网站，域名是必不可少的。如果你不想掏钱买，还可以通过Github、Gitee等代码托管平台，让它为你分配一个免费的域名。当然前提是你已经在某托管平台上注册过。</p>
 <h2 id="二、框架使用"><a href="#二、框架使用" class="headerlink" title="二、框架使用"></a>二、框架使用</h2><p>以hexo静态框架为例。<br>已经有许多优秀的博主整理过非常详尽的步骤了，比如<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/6dfc7cfdc7e0">【Hexo搭建独立博客全纪录】（三）使用Hexo搭建博客</a>、<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/b5d7dcc83728">『Hexo』使用Hexo搭建GitHub博客</a>等等。<br>我这里整理一下我踩过的坑。</p>
+<pre class=" language-.yml"><code class="language-.yml"># Site
+title: 
+subtitle: ''
+description: 
+keywords:
+author: 
+language: en
+timezone: ''</code></pre>
+<p>其中<br>title: 你的网站名<br>subtitle: 子标题<br>description: 网站描述。主要用于SEO，告诉搜索引擎一个关于您站点的简单描述，通常建议在其中包含您网站的关键词。<br>keywords: 关键词<br>author: 作者名<br>language: 语言。包括中文（zh-cn）、英文（en）等。<br>timezone: </p>
 <h2 id="三、主题选取"><a href="#三、主题选取" class="headerlink" title="三、主题选取"></a>三、主题选取</h2><p>选好了框架，一般框架下也会为你提供一个简单的主题。比如hexo中的<code>landscape</code>文件就是hexo自带的一个主题。<br>主题安装有两种方式：<br>1.在Bash上输入命令。<br>2.在Github上搜索主题发布者，下载Zip文件。</p>
 <h2 id="四、域名创建和绑定"><a href="#四、域名创建和绑定" class="headerlink" title="四、域名创建和绑定"></a>四、域名创建和绑定</h2><p>如果你不在乎博客的域名是什么形式的，只是小打小闹想做一个个人网站，我个人推荐使用托管平台来创建域名。它唯一且最大的优点是：免费！<br>以Github为例。</p>
-<h2 id="五、其它有趣的功能"><a href="#五、其它有趣的功能" class="headerlink" title="五、其它有趣的功能"></a>五、其它有趣的功能</h2><h3 id="1、站内搜索"><a href="#1、站内搜索" class="headerlink" title="1、站内搜索"></a>1、站内搜索</h3><pre class=" language-yml"><code class="language-yml">1+1=2</code></pre>
-<h3 id="2、多级导航菜单"><a href="#2、多级导航菜单" class="headerlink" title="2、多级导航菜单"></a>2、多级导航菜单</h3><pre class=" language-yml"><code class="language-yml"># Site
-title: 你的站点名
-subtitle:
-description: 站点简介
-keywords:
-author: 作者名
-language: zh-cn
-timezone:</code></pre>
-<h3 id="3、音乐播放器"><a href="#3、音乐播放器" class="headerlink" title="3、音乐播放器"></a>3、音乐播放器</h3><h3 id="4、评论"><a href="#4、评论" class="headerlink" title="4、评论"></a>4、评论</h3><h3 id="5、代码块高亮"><a href="#5、代码块高亮" class="headerlink" title="5、代码块高亮"></a>5、代码块高亮</h3><p>参见<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45631738/article/details/104771095">hexo+sakura主题美化合集</a><br>1.首先我们需要安装代码块高亮的插件，通过下面命令安装</p>
+<h2 id="五、其它有趣的功能"><a href="#五、其它有趣的功能" class="headerlink" title="五、其它有趣的功能"></a>五、其它有趣的功能</h2><h3 id="1、站内搜索"><a href="#1、站内搜索" class="headerlink" title="1、站内搜索"></a>1、站内搜索</h3><p>如果是sakura主题，简简单单输入下面命令安装相关的插件就可以正常使用了</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-generator-json-content --save</code></pre>
+<p>如果是其它主题，参见<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45631738/article/details/105160488">hexo博客搭建之添加搜索功能</a>。</p>
+<h3 id="2、多级导航菜单"><a href="#2、多级导航菜单" class="headerlink" title="2、多级导航菜单"></a>2、多级导航菜单</h3><h3 id="3、音乐播放器"><a href="#3、音乐播放器" class="headerlink" title="3、音乐播放器"></a>3、音乐播放器</h3><pre class=" language-.yml"><code class="language-.yml"># 播放器  
+aplayer: 
+  id: 2660651585
+  server: netease
+  type: playlist
+  fixed: true
+  autoplay: false
+  loop: all
+  order: random
+  preload: auto
+  volume: 0.7
+  mutex: true
+  #enable: true
+</code></pre>
+<p>其中</p>
+<pre class=" language-.yml"><code class="language-.yml">解析：server="netease" type="playlist" id="60198"
+
+server指音乐平台，netease指网易云音乐， type类型，playlist列表，id指歌曲的i或者专辑或列表外链id
+因此重点在于指定平台，指定外链id</code></pre>
+<h3 id="4、评论"><a href="#4、评论" class="headerlink" title="4、评论"></a>4、评论</h3><h3 id="5、代码块高亮"><a href="#5、代码块高亮" class="headerlink" title="5、代码块高亮"></a>5、代码块高亮</h3><p>参见<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45631738/article/details/104771095">hexo+sakura主题美化合集</a><br>1.首先我们需要安装代码块高亮的插件，通过下面命令安装</p>
 <pre class=" language-Bash"><code class="language-Bash">npm i -S hexo-prism-plugin</code></pre>
-<p>2.我们需要修改博客的配置文件<code>_config.yml</code>, 关闭自带的高亮<br>在配置文件中找看有没有highlight，有的话用下面代码将其替换，没有的话自行添加，可以添加在代码的最末尾处</p>
-<pre class=" language-yml"><code class="language-yml">highlight:
+<p>2.我们需要修改博客的配置文件<code>_config.yml</code>, 关闭自带的高亮<br>在配置文件中找看有没有<code>highlight</code>，有的话用下面代码将其替换，没有的话自行添加，可以添加在代码的最末尾处</p>
+<pre class=" language-.yml"><code class="language-.yml">highlight:
   enable: false
 prism_plugin:
   mode: 'preprocess'    
   theme: 'default'
   line_number: false    # default false
   custom_css: 'path/to/your/custom.css'     # optional</code></pre>
+<h3 id="6、添加RSS订阅"><a href="#6、添加RSS订阅" class="headerlink" title="6、添加RSS订阅"></a>6、添加RSS订阅</h3><p>1.安装 Feed 插件</p>
+<pre class=" language-Bash"><code class="language-Bash">npm install hexo-generator-feed --save</code></pre>
+<p>2.配置站点目录下的<code>_config.yml</code>文件，添加如下代码：</p>
+<pre class=" language-.yml"><code class="language-.yml">feed:
+    type: atom
+    path: atom.xml
+    limit: 20
+    hub:</code></pre>
+<p>其中<br>·type - 订阅类型 (atom 或 rss2)<br>·path - 路径 (默认: atom.xml 或 rss2.xml)<br>·limit - 最多显示文章数量 (0 或 false 展示所有文章)<br>·hub - PubSubHubbub hubs 的 URL (PubSubHubbub 是一个“开放的、服务器对服务器、基于Web-hook的发布/订阅协议，是 Atom 和 RSS 的扩展”。不使用就留空)  </p>
+<h2 id="六、后续"><a href="#六、后续" class="headerlink" title="六、后续"></a>六、后续</h2><h3 id="讲述如有不清楚的地方，可参考视频进行补充学习。"><a href="#讲述如有不清楚的地方，可参考视频进行补充学习。" class="headerlink" title="讲述如有不清楚的地方，可参考视频进行补充学习。"></a>讲述如有不清楚的地方，可参考视频进行补充学习。</h3><div style="position: relative; width: 100%; height: 0; padding-bottom: 75%;"><iframe src="//player.bilibili.com/player.html?aid=24897960&page=" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;"></iframe></div>
 
         </div>
         <!-- .entry-content -->
@@ -468,9 +500,26 @@ prism_plugin:
       <div class="toc" style="background: none;"></div>
       <section class="post-squares nextprev">
         
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/2020/10/21/%E6%88%91%E7%9A%84%E9%9A%8F%E7%AC%94%E9%9B%86/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                我的随笔集</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
         
           
-            <div class="post-nepre full next">
+            <div class="post-nepre half next">
           
             <a href="/2020/10/20/%E7%94%B5%E8%84%91%E4%BD%BF%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/" rel="next">
               <div class="background">
@@ -891,7 +940,7 @@ $(document).ready(function() {
 </style>
 <meting-js
 
-    id="2660651585"
+    id="692298271"
 
     server="netease"
 
